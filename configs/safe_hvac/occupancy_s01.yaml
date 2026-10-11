@@ -1,0 +1,4 @@
+extends: train_s01.yaml
+safety:
+  occupancy_variables: [people_occupant]
+  unoccupied_bounds: [15, 30]

@@ -1,0 +1,19 @@
+# GPU host only: short integration run, not a performance experiment.
+total_timesteps: 256
+environment:
+  building_config:
+    runperiod: [1, 1, 1991, 2, 1, 1991]
+ppo:
+  n_steps: 64
+  batch_size: 32
+  n_epochs: 2
+barrier:
+  updates_per_rollout: 2
+  batch_size: 32
+  replay_capacity: 256
+storage:
+  checkpoint_every_steps: 128
+  max_run_gb: 2
+evaluation:
+  max_steps: 64
+evaluation_seeds: [6767]

@@ -1,0 +1,11 @@
+extends: train_s01.yaml
+total_timesteps: 262144
+environment:
+  building_config:
+    runperiod: [1, 1, 1991, 31, 12, 1991]
+ppo:
+  n_steps: 2048
+  batch_size: 128
+storage:
+  checkpoint_every_steps: 16384
+  max_run_gb: 20

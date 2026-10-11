@@ -1,0 +1,20 @@
+# Generated experiment data and Python environments
+results/
+models/
+logs/
+wandb/
+*.log
+Eplus-env-*/
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Independent, reproducible clones: publish sources.json + patch + bootstrap.
+references/srlnbc/
+references/sinergym/
+HVAC_SAFE_RL_/
+
+# Optional publish bundle (created locally, not source code).
+dist/

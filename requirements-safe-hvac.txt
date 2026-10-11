@@ -1,0 +1,11 @@
+# Python 3.12. Install GPU PyTorch from its official selector BEFORE this file.
+# This small environment is independent of the historical root requirements.txt.
+torch>=2.7,<3
+sinergym==3.12.0
+stable-baselines3==2.8.0
+gymnasium==1.2.3
+numpy==2.3.5
+pandas==2.3.3
+matplotlib==3.10.7
+PyYAML==6.0.3
+pytest==8.4.2

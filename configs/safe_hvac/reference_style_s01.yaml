@@ -1,0 +1,5 @@
+extends: multistep_s01.yaml
+# Separate variant: reproduce the reference's actor scaling/variance reduction idea.
+barrier:
+  standardize_residual: true
+  scale_actor_loss: true

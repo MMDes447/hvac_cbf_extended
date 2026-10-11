@@ -1,0 +1,19 @@
+{
+  "srlnbc": {
+    "url": "https://github.com/jjyyxx/srlnbc.git",
+    "commit": "4d2217b833e62e40f8a401a09b2283493e7e9958",
+    "paper_doi": "10.1109/LRA.2023.3238656",
+    "role": "Original method reference; isolated checkout, separate obsolete TensorFlow/Ray stack"
+  },
+  "HVAC_SAFE_RL_": {
+    "url": "https://github.com/MMDes447/HVAC_SAFE_RL_.git",
+    "commit": "3d9f3ae1bfee0d24f51dbe4b6b09bfd601d4d715",
+    "role": "Released HVAC implementation; corrected adapters distributed as a patch"
+  },
+  "sinergym": {
+    "url": "https://github.com/ugr-sail/sinergym.git",
+    "tag": "v3.12.0",
+    "commit": "f0b41062990d1e6222047a836aea1d8ac6f43b2f",
+    "energyplus": "25.1.0"
+  }
+}

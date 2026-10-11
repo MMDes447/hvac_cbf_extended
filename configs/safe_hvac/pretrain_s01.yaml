@@ -1,0 +1,3 @@
+extends: train_s01.yaml
+# Included in the 32768 interaction budget; 30720 steps still train the policy.
+barrier_pretrain_steps: 2048

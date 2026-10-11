@@ -1,0 +1,6 @@
+# Initial winter pilot; repeat with --algorithm ppo for a matched baseline.
+algorithm: barrier_ppo
+total_timesteps: 32768
+agent_seed: 2
+env_seed: 1
+evaluation_seeds: [6767, 690, 2845]

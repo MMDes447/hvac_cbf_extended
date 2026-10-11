@@ -1,0 +1,3 @@
+extends: train_s01.yaml
+barrier:
+  horizons: 10

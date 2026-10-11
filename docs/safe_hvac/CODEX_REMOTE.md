@@ -1,0 +1,17 @@
+# Instructions for Codex on the GPU machine
+
+Use this as the task prompt after cloning the prepared repository:
+
+> Run the corrected safe HVAC PPO workflow in this repository on this GPU host. Read `README_SAFE_HVAC.md`, `docs/safe_hvac/GPU_RUNBOOK.md`, and `docs/safe_hvac/METHOD_AND_CHANGES.md` first. The preparation machine has not run Sinergym experiments; establish the real integration here.
+>
+> Inspect the GPU/driver, Python and installed EnergyPlus. Prepare a separate Python 3.12 environment using `requirements-safe-hvac.txt`, a compatible official CUDA PyTorch build, and the pinned EnergyPlus 25.1.0 release. Save the actual package lock in `results/setup`. Do not install the old `srlnbc` TensorFlow/Ray stack in this environment. Use `python -m safe_hvac.train`, not the old Hydra trainer. References can be reconstructed with `scripts/bootstrap_references.py`; no reference installation is needed for Sinergym.
+>
+> Run the doctor, the numerical tests, and an eight-step real Sinergym preflight. Fix any failure before proceeding. Then run both 256-step smoke agents, plain PPO and barrier PPO, in separate new run directories. Check complete status, exact interaction count, real physical clock advance and action mapping, actual policy/barrier parameter changes, finite losses/gradients, checkpoint reload, frozen evaluation normalization, and per-seed physical metrics. Preserve error traces and diagnose failures rather than reporting success from a created model file alone.
+>
+> Once both smoke runs meet the runbook's acceptance criteria, execute the six-run matched winter pilot using `scripts/run_safe_hvac_pilot.sh` with a unique batch name. Keep each pair's environment seed, task, PPO architecture/reward, budget and evaluation seeds matched. Report every trained agent and every evaluation seed. The final checkpoint is selected in advance; do not select the best evaluation episode or tune on final test results. Do not launch the annual/48-situation/30-replication matrix during this initial task.
+>
+> Save outputs in `results/safe_hvac`, outside simulator episode directories. Retain compressed scientific records, resolved configs, source/version/asset manifests, setup lock, optimizer checkpoints and normalization. Keep bounded replay, `max_ep_store=2`, latest two checkpoints, and the configured storage budget. If a run fails or exceeds the budget, record and explain the failure; preserve its scientific records. Use new output names for retries. No external tracking account is required.
+>
+> Produce the comparison CSV/JSON and a concise findings document describing actual training counts, optimizer changes, reload checks, energy, comfort violation rate, degree-hours, maximum observed deviation, classification errors, dual evolution and storage use. Distinguish integration success from performance improvement. State that the default 5Zone registration measures SPACE5-1 only, the method has no runtime action shield, and a low learned barrier loss does not prove safety. Return links to the result files and final bundles. Do not claim an improvement that the measurements do not show.
+
+If only environment setup needs a host-specific choice, inspect available versions/hardware and choose a compatible configuration using official sources. If installation requires permissions unavailable to you, preserve completed work and state the concrete blocked operation. No experiment should be started on the original preparation machine.
